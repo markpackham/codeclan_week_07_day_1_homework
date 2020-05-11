@@ -8,7 +8,25 @@
     <title>To Do List</title>
   </head>
   <body>
+    <div id="app">
       <h1>ToDo's</h1>
-    <div id="app"></div>
+      <form v-on:submit.prevent="saveNewItem">
+        <input id="new-item" type="text" v-model="newItem" />
+        <input type="radio" id="High" name="priority" value="High" />
+        <label for="High">High</label>
+        <input
+          type="radio"
+          id="Low"
+          name="priority"
+          value="Low"
+          checked="checked"
+        />
+        <label for="Low">Low</label>
+        <input type="submit" value="Save Item" />
+      </form>
+      <ul>
+        <li v-for="(item, index) in todos"><span>{{ item }}</span></li>
+      </ul>
+    </div>
   </body>
 </html>

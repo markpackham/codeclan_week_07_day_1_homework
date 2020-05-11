@@ -5,8 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
     el: "#app",
     data: {
       todos: ["Buy shopping", "Clean bathroom", "Car's MOT"],
-      newItem: ""
+      newItem: "",
     },
-    methods: {},
+    methods: {
+      saveNewItem: function () {
+        this.todos.push(this.newItem);
+        this.newItem = "";
+      },
+    },
   });
 });
