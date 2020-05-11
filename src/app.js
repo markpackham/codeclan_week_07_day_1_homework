@@ -16,12 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
       saveNewItem: function () {
         this.todos.push({
           name: this.newItem,
-          picked: "Low",
+          priority: this.picked,
         });
         this.newItem = "";
-      },
-      setPriority: function (index) {
-        this.items[index].isPurchased = true;
       },
     },
   });
