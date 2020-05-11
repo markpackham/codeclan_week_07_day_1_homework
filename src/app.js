@@ -10,11 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Car's MOT", priority: "High" },
       ],
       newItem: "",
-      picked: "",
+      picked: "Low",
     },
     methods: {
       saveNewItem: function () {
-        this.todos.push(this.newItem);
+        this.todos.push({
+          name: this.newItem,
+          picked: "Low",
+        });
         this.newItem = "";
       },
       setPriority: function (index) {
