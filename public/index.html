@@ -14,18 +14,17 @@
         <input id="new-item" type="text" v-model="newItem" />
         <input type="radio" id="High" name="priority" value="High" />
         <label for="High">High</label>
-        <input
-          type="radio"
-          id="Low"
-          name="priority"
-          value="Low"
-          checked="checked"
-        />
+        <input type="radio" id="Low" name="priority" value="Low" checked />
         <label for="Low">Low</label>
         <input type="submit" value="Save Item" />
       </form>
       <ul>
-        <li v-for="(item, index) in todos"><span>{{ item }}</span></li>
+        <li
+          v-for="(item, index) in todos"
+          :class="item.Low ? 'low-priority':'high-priority'"
+        >
+          <span>{{ item }}</span>
+        </li>
       </ul>
     </div>
   </body>
