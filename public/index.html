@@ -11,7 +11,13 @@
     <div id="app">
       <h1>ToDo's</h1>
       <form v-on:submit.prevent="saveNewItem">
-        <input id="new-item" type="text" v-model="newItem" />
+        <input
+          id="new-item"
+          type="text"
+          v-model="newItem"
+          placeholder="Add your todo here!"
+          required
+        />
         <input
           type="radio"
           id="High"
@@ -28,7 +34,7 @@
           v-model="picked"
         />
         <label for="Low">Low</label>
-        <input type="submit" value="Save Item" />
+        <input type="submit" value="Save Item" class="btn-save" />
       </form>
       <ul>
         <li
