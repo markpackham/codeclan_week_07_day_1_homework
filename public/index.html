@@ -8,43 +8,7 @@
     <title>To Do List</title>
   </head>
   <body>
-    <div id="app">
-      <h1>ToDo's</h1>
-      <form v-on:submit.prevent="saveNewItem">
-        <input
-          id="new-item"
-          type="text"
-          v-model="newItem"
-          placeholder="Add your todo here!"
-          required
-        />
-        <input
-          type="radio"
-          id="High"
-          name="priority"
-          value="High"
-          v-model="picked"
-        />
-        <label for="High">High</label>
-        <input
-          type="radio"
-          id="Low"
-          name="priority"
-          value="Low"
-          v-model="picked"
-        />
-        <label for="Low">Low</label>
-        <input type="submit" value="Save Item" class="btn-save" />
-      </form>
-      <ul>
-        <li
-          v-for="(item, index) in todos"
-          :class="item.priority === 'Low' ? 'low-priority':'high-priority'"
-        >
-          <span>{{ item.name }}</span>
-          <span>{{ item.priority }}</span>
-        </li>
-      </ul>
-    </div>
+    <h1>Currency Converter</h1>
+    <div id="app"></div>
   </body>
 </html>
